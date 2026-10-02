@@ -1,0 +1,21 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+  server: {
+    host: true
+  },
+  base: './',
+  preview: {
+    host: '0.0.0.0',
+    port: '4173'
+  },
+  build: {
+    chunkSizeWarningLimit: 1000 // en kB, ajustez selon vos besoins
+  }
+});
